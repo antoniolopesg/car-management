@@ -13,7 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("../views/sample.fxml"));
         primaryStage.setTitle("Simple Car Management");
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 600, 600));
         primaryStage.show();
     }
 
