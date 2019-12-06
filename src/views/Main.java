@@ -7,14 +7,31 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
+    private static Scene HOME;
+
+    private static Stage currentScreen;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../views/sample.fxml"));
+        currentScreen = primaryStage;
         primaryStage.setTitle("Simple Car Management");
-        primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 600, 600));
-        primaryStage.show();
+
+        Parent home = FXMLLoader.load(getClass().getResource("home/home.fxml"));
+        HOME = new Scene(home);
+
+        changeScreen("home");
+    }
+
+    public static void changeScreen(String viewName){
+        currentScreen.close();
+
+        switch (viewName.toLowerCase()){
+            case "home":
+                currentScreen.setScene(HOME);
+                break;
+        }
+
+        currentScreen.show();
     }
 
 

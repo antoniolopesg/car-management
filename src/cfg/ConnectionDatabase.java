@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 public class ConnectionDatabase {
     private static final String DRIVER = "org.postgresql.Driver";
-    private static final String URI = "jdbc:postgresql://localhost:5432/Databases";
+    private static final String URI = "jdbc:postgresql://localhost:5432/car_management";
     private static final String USER = "postgres";
     private static final String PASSWORD = "postgres";
 
