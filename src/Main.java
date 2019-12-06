@@ -1,5 +1,3 @@
-package views;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,7 +14,7 @@ public class Main extends Application {
         currentScreen = primaryStage;
         primaryStage.setTitle("Simple Car Management");
 
-        Parent home = FXMLLoader.load(getClass().getResource("home/home.fxml"));
+        Parent home = FXMLLoader.load(getClass().getResource("views/home/home.fxml"));
         HOME = new Scene(home);
 
         changeScreen("home");

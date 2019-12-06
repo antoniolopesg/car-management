@@ -1,4 +1,4 @@
-package views.home;
+package controllers.home;
 
 public class Controller {
 }
