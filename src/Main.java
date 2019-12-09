@@ -13,6 +13,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         currentScreen = primaryStage;
         primaryStage.setTitle("Simple Car Management");
+        primaryStage.setResizable(false);
 
         Parent home = FXMLLoader.load(getClass().getResource("views/home/home.fxml"));
         HOME = new Scene(home);
