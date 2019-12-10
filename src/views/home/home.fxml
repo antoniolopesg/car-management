@@ -41,11 +41,11 @@
       <Button layoutX="15.0" layoutY="213.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="353.0" text="Adicionar carro" />
       <Label layoutX="85.0" layoutY="266.0" text="Erro ao salvar no banco de dados" textFill="RED" />
       <TreeTableView layoutX="16.0" layoutY="303.0" prefHeight="261.0" prefWidth="570.0">
-        <columns>
-          <TreeTableColumn prefWidth="75.0" text="C1" />
-          <TreeTableColumn prefWidth="75.0" text="C2" />
+         <columns>
+            <TreeTableColumn prefWidth="75.0" text="C1" />
+            <TreeTableColumn prefWidth="75.0" text="C2" />
             <TreeTableColumn prefWidth="75.0" text="Column X" />
-        </columns>
+         </columns>
       </TreeTableView>
       <Separator layoutX="376.0" orientation="VERTICAL" prefHeight="290.0" />
    </children>
