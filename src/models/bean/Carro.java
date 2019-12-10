@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Carro {
     private String placa;
-    private int ano;
+    private String ano;
     private String cor;
     private String marca;
     private String modelo;
@@ -12,7 +12,7 @@ public class Carro {
     private String proprietario;
     private Date dataCompra;
 
-    public Carro(String placa, int ano, String cor, String marca, String modelo, String chassi, String proprietario, Date dataCompra) {
+    public Carro(String placa, String ano, String cor, String marca, String modelo, String chassi, String proprietario, Date dataCompra) {
         this.placa = placa;
         this.ano = ano;
         this.cor = cor;
@@ -31,11 +31,11 @@ public class Carro {
         this.placa = placa;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 

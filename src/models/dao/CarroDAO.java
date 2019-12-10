@@ -1,6 +1,7 @@
 package models.dao;
 
 import cfg.ConnectionDatabase;
+import javafx.scene.control.Alert;
 import models.bean.Carro;
 
 import javax.swing.*;
@@ -15,7 +16,7 @@ public class CarroDAO {
 
         try {
             stmt = conn.prepareStatement("INSERT INTO carros (ano, cor, marca, modelo, chassi, proprietario, datacompra, placa) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
-            stmt.setInt(1,carro.getAno());
+            stmt.setString(1, carro.getAno());
             stmt.setString(2, carro.getCor());
             stmt.setString(3, carro.getMarca());
             stmt.setString(4, carro.getModelo());
@@ -27,9 +28,9 @@ public class CarroDAO {
             stmt.executeUpdate();
         } catch (SQLException exc){
             if(exc.getSQLState().equals("23505")){
-                JOptionPane.showMessageDialog(null, "Placa já foi cadastrada.");
+                new Alert(Alert.AlertType.WARNING, "Placa já foi cadastrada").show();
             } else {
-                JOptionPane.showMessageDialog(null, "Verifique os campos novamente.");
+                new Alert(Alert.AlertType.WARNING, "Verifique se tem campo em branco").show();
             }
         }
     }
