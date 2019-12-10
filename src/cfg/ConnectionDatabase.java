@@ -19,7 +19,6 @@ public class ConnectionDatabase {
     public static Connection getConn(){
         try {
             Class.forName(DRIVER);
-            JOptionPane.showMessageDialog(null, "Conexão realizada com sucesso!");
             return DriverManager.getConnection(URI, USER, PASSWORD);
         } catch(ClassNotFoundException | SQLException excep){
             throw new RuntimeException("Erro na conexão com o banco de dados", excep);
