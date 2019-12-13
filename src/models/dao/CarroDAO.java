@@ -4,7 +4,6 @@ import cfg.ConnectionDatabase;
 import javafx.scene.control.Alert;
 import models.bean.Carro;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -30,8 +29,16 @@ public class CarroDAO {
             if(exc.getSQLState().equals("23505")){
                 new Alert(Alert.AlertType.WARNING, "Placa já foi cadastrada").show();
             } else {
-                new Alert(Alert.AlertType.WARNING, "Verifique se tem campo em branco").show();
+                new Alert(Alert.AlertType.WARNING, "Verifique novamente o formato dos campos e se tem algum vazio").show();
+            }
+        } finally {
+            if(stmt != null){
+                ConnectionDatabase.closeConn(conn, stmt);
+            } else {
+                ConnectionDatabase.closeConn(conn);
             }
         }
     }
+
+
 }
