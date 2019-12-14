@@ -1,5 +1,6 @@
 package controllers.home;
 
+import boot.Main;
 import helpers.EmptyInputException;
 import helpers.PlacaFormatException;
 import javafx.event.ActionEvent;
@@ -26,6 +27,7 @@ public class Controller implements Initializable {
     public DatePicker dataCompra;
 
     public TextField[] inputs;
+    public Button listCars;
 
     @FXML
     private Button addCar;
@@ -73,6 +75,11 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.inputs = new TextField[] {placa, ano, cor, marca, modelo, chassi, proprietario};
+        listCars.setOnAction(this::listCarsScreen);
+    }
+
+    public void listCarsScreen(ActionEvent mouseEvent){
+        Main.changeScreen("listcars");
     }
 
     public void validatePlaca() throws PlacaFormatException {
