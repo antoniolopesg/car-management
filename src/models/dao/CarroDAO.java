@@ -6,7 +6,9 @@ import models.bean.Carro;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class CarroDAO {
     public void create(Carro carro)  {
@@ -40,5 +42,33 @@ public class CarroDAO {
         }
     }
 
+    public ArrayList<Carro> readAll(){
+        Connection conn = ConnectionDatabase.getConn();
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
 
+        ArrayList<Carro> lista = new ArrayList<Carro>();
+
+        try {
+            stmt = conn.prepareStatement("SELECT * FROM carros");
+            rs = stmt.executeQuery();
+
+            while(rs.next()){
+                Carro car = new Carro();
+                car.setPlaca(rs.getString("placa"));
+                car.setAno(rs.getString("ano"));
+                car.setCor(rs.getString("cor"));
+                car.setMarca(rs.getString("marca"));
+                car.setModelo(rs.getString("modelo"));
+                car.setChassi(rs.getString("chassi"));
+                car.setProprietario(rs.getString("proprietario"));
+                car.setDataCompra(rs.getDate("datacompra"));
+                lista.add(car);
+            }
+        } catch (SQLException exc){
+            new Alert(Alert.AlertType.WARNING, "HOUVE ALGUM ERRO AO CARREGAR DADOS").show();
+        }
+
+        return lista;
+    }
 }

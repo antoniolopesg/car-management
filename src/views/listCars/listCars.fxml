@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.listCars.ListCars">
+<AnchorPane prefHeight="417.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.listCars.ListCars">
    <children>
-      <TableView layoutY="145.0" prefHeight="255.0" prefWidth="600.0">
+      <Button fx:id="list" layoutX="10.0" layoutY="46.0" mnemonicParsing="false" onAction="#list" text="Listar carros/Atualizar" />
+      <TableView fx:id="table" layoutY="100.0" prefHeight="317.0" prefWidth="724.0">
         <columns>
-          <TableColumn prefWidth="60.0" text="Placa" />
-          <TableColumn prefWidth="69.0" text="Ano" />
-            <TableColumn prefWidth="63.0" text="Cor" />
-            <TableColumn prefWidth="82.0" text="Marca" />
-            <TableColumn prefWidth="61.0" text="Modelo" />
-            <TableColumn prefWidth="57.0" text="Chassi" />
-            <TableColumn prefWidth="105.0" text="Proprietario" />
-            <TableColumn prefWidth="102.0" text="Data Compra" />
+          <TableColumn fx:id="colPlaca" prefWidth="61.0" text="Placa" />
+          <TableColumn fx:id="colAno" prefWidth="60.0" text="Ano" />
+            <TableColumn fx:id="colCor" prefWidth="86.0" text="Cor" />
+            <TableColumn fx:id="colMarca" prefWidth="109.0" text="Marca" />
+            <TableColumn fx:id="colModelo" prefWidth="107.0" text="Modelo" />
+            <TableColumn fx:id="colChassi" prefWidth="68.0" text="Chassi" />
+            <TableColumn fx:id="colProp" prefWidth="113.0" text="Proprietario" />
+            <TableColumn fx:id="colDC" prefWidth="117.0" text="Data Compra" />
         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
       </TableView>
+      <Button fx:id="voltar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
    </children>
 </AnchorPane>

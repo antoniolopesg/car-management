@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="only db pass update">
-      <change afterPath="$PROJECT_DIR$/src/controllers/listCars/ListCars.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/listCars/listCars.fxml" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="ui update and list cars view">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/boot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cfg/ConnectionDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cfg/ConnectionDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/listCars/ListCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/listCars/ListCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/bean/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/bean/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/dao/CarroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/dao/CarroDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/home/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/home/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/listCars/listCars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/listCars/listCars.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -313,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576245632444</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ui update and list cars view">
+      <created>1576347535891</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576347535891</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -332,7 +342,8 @@
     <MESSAGE value="add car button synchronization with database" />
     <MESSAGE value="handling input exceptions" />
     <MESSAGE value="only db pass update" />
-    <option name="LAST_COMMIT_MESSAGE" value="only db pass update" />
+    <MESSAGE value="ui update and list cars view" />
+    <option name="LAST_COMMIT_MESSAGE" value="ui update and list cars view" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="124" width="802" height="672" key="#Notifications" timestamp="1575468470201">
@@ -347,10 +358,10 @@
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="185" y="125" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1600.875@0.25.1600.875" timestamp="1575988255964" />
-    <state x="608" y="149" width="462" height="621" key="#com.intellij.ide.util.MemberChooser" timestamp="1576242697082">
+    <state x="608" y="149" width="462" height="621" key="#com.intellij.ide.util.MemberChooser" timestamp="1576351571834">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="608" y="149" width="462" height="621" key="#com.intellij.ide.util.MemberChooser/0.25.1600.875@0.25.1600.875" timestamp="1576242697082" />
+    <state x="608" y="149" width="462" height="621" key="#com.intellij.ide.util.MemberChooser/0.25.1600.875@0.25.1600.875" timestamp="1576351571834" />
     <state x="650" y="355" width="292" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575988179129">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
@@ -367,10 +378,10 @@
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="533" y="212" width="526" height="496" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1600.875@0.25.1600.875" timestamp="1575467675148" />
-    <state x="462" y="60" width="668" height="800" key="CommitChangelistDialog2" timestamp="1576245632313">
+    <state x="462" y="60" width="668" height="800" key="CommitChangelistDialog2" timestamp="1576347535180">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="462" y="60" width="668" height="800" key="CommitChangelistDialog2/0.25.1600.875@0.25.1600.875" timestamp="1576245632313" />
+    <state x="462" y="60" width="668" height="800" key="CommitChangelistDialog2/0.25.1600.875@0.25.1600.875" timestamp="1576347535180" />
     <state x="151" y="95" width="1282" height="725" key="DiffContextDialog" timestamp="1576014561581">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
@@ -379,22 +390,22 @@
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="507" y="219" width="612" height="507" key="FileChooserDialogImpl/0.25.1600.875@0.25.1600.875" timestamp="1576012289128" />
-    <state width="1554" height="222" key="GridCell.Tab.0.bottom" timestamp="1576347477933">
+    <state width="1554" height="222" key="GridCell.Tab.0.bottom" timestamp="1576353821266">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.bottom/0.25.1600.875@0.25.1600.875" timestamp="1576347477933" />
-    <state width="1554" height="222" key="GridCell.Tab.0.center" timestamp="1576347477931">
+    <state width="1554" height="222" key="GridCell.Tab.0.bottom/0.25.1600.875@0.25.1600.875" timestamp="1576353821266" />
+    <state width="1554" height="222" key="GridCell.Tab.0.center" timestamp="1576353821265">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.center/0.25.1600.875@0.25.1600.875" timestamp="1576347477931" />
-    <state width="1554" height="222" key="GridCell.Tab.0.left" timestamp="1576347477931">
+    <state width="1554" height="222" key="GridCell.Tab.0.center/0.25.1600.875@0.25.1600.875" timestamp="1576353821265" />
+    <state width="1554" height="222" key="GridCell.Tab.0.left" timestamp="1576353821265">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.left/0.25.1600.875@0.25.1600.875" timestamp="1576347477931" />
-    <state width="1554" height="222" key="GridCell.Tab.0.right" timestamp="1576347477933">
+    <state width="1554" height="222" key="GridCell.Tab.0.left/0.25.1600.875@0.25.1600.875" timestamp="1576353821265" />
+    <state width="1554" height="222" key="GridCell.Tab.0.right" timestamp="1576353821265">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.right/0.25.1600.875@0.25.1600.875" timestamp="1576347477933" />
+    <state width="1554" height="222" key="GridCell.Tab.0.right/0.25.1600.875@0.25.1600.875" timestamp="1576353821265" />
     <state width="1554" height="275" key="GridCell.Tab.1.bottom" timestamp="1576245760629">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
@@ -415,10 +426,10 @@
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="304" y="55" width="1026" height="840" key="SettingsEditor/0.25.1600.875@0.25.1600.875" timestamp="1576012356374" />
-    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser" timestamp="1576245042602">
+    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser" timestamp="1576347539354">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser/0.25.1600.875@0.25.1600.875" timestamp="1576245042602" />
+    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser/0.25.1600.875@0.25.1600.875" timestamp="1576347539354" />
     <state x="395" y="199" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576245641006">
       <screen x="0" y="25" width="1600" height="875" />
     </state>

@@ -14,10 +14,9 @@ public class ConnectionDatabase {
     private static final String DRIVER = "org.postgresql.Driver";
     private static final String URI = "jdbc:postgresql://localhost:5432/car_management";
     private static final String USER = "postgres";
-    private static final String PASSWORD = "postgres";
+    private static final String PASSWORD = "852654al";
 
     public static Connection getConn(){
-        System.out.println(PASSWORD);
         try {
             Class.forName(DRIVER);
             return DriverManager.getConnection(URI, USER, PASSWORD);

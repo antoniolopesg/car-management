@@ -83,6 +83,7 @@ public class Controller implements Initializable {
     }
 
     public void validatePlaca() throws PlacaFormatException {
+
         if(!this.placa.getText().trim().matches("[A-Z]{3}[-][0-9]{4}")){
             throw new PlacaFormatException(placa.getText());
         }

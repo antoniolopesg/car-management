@@ -35,6 +35,7 @@ public class Main extends Application {
                 break;
             case "listcars":
                 currentScreen.setScene(LISTCARS);
+                break;
         }
 
         currentScreen.show();

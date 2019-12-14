@@ -23,6 +23,17 @@ public class Carro {
         this.dataCompra = dataCompra;
     }
 
+    public Carro() {
+        placa = null;
+        ano = null;
+        cor = null;
+        marca = null;
+        modelo = null;
+        chassi = null;
+        proprietario = null;
+        dataCompra = null;
+    }
+
     public String getPlaca() {
         return placa;
     }
@@ -85,5 +96,19 @@ public class Carro {
 
     public void setDataCompra(Date dataCompra) {
         this.dataCompra = dataCompra;
+    }
+
+    @Override
+    public String toString() {
+        return "Carro{" +
+                "placa='" + placa + '\'' +
+                ", ano='" + ano + '\'' +
+                ", cor='" + cor + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", chassi='" + chassi + '\'' +
+                ", proprietario='" + proprietario + '\'' +
+                ", dataCompra=" + dataCompra +
+                '}';
     }
 }
