@@ -67,6 +67,12 @@ public class CarroDAO {
             }
         } catch (SQLException exc){
             new Alert(Alert.AlertType.WARNING, "HOUVE ALGUM ERRO AO CARREGAR DADOS").show();
+        } finally {
+            if(stmt != null){
+                ConnectionDatabase.closeConn(conn, stmt);
+            } else {
+                ConnectionDatabase.closeConn(conn);
+            }
         }
 
         return lista;

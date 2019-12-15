@@ -1,6 +1,7 @@
 package controllers.home;
 
 import boot.Main;
+import controllers.listCars.ListCars;
 import helpers.EmptyInputException;
 import helpers.PlacaFormatException;
 import javafx.event.ActionEvent;
@@ -32,10 +33,12 @@ public class Controller implements Initializable {
     @FXML
     private Button addCar;
 
-    public void createCar(ActionEvent mouseEvent) {
+    public Carro createCar(ActionEvent mouseEvent) {
 
         SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
         Date data = null;
+
+        Carro newCarro = null;
 
         try {
             for(TextField input:inputs){
@@ -48,7 +51,7 @@ public class Controller implements Initializable {
 
             data = dt.parse(dataCompra.getEditor().getText());
 
-            Carro newCarro = new Carro(placa.getText().trim(),
+            newCarro = new Carro(placa.getText().trim(),
                                        ano.getText().trim(),
                                        cor.getText().trim(),
                                        marca.getText().trim(),
@@ -66,6 +69,8 @@ public class Controller implements Initializable {
         } catch (PlacaFormatException e) {
             new Alert(Alert.AlertType.WARNING, e.toString()).show();
         }
+
+        return newCarro;
     }
 
     public static boolean InputValidator(TextField input){
@@ -88,5 +93,4 @@ public class Controller implements Initializable {
             throw new PlacaFormatException(placa.getText());
         }
     }
-
 }
