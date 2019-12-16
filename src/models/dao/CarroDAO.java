@@ -11,7 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CarroDAO {
-    public void create(Carro carro)  {
+    public void create(Carro carro) {
         Connection conn = ConnectionDatabase.getConn();
         PreparedStatement stmt = null;
 
@@ -24,17 +24,17 @@ public class CarroDAO {
             stmt.setString(5, carro.getChassi());
             stmt.setString(6, carro.getProprietario());
             stmt.setDate(7, new java.sql.Date(carro.getDataCompra().getTime()));
-            stmt.setString(8,  carro.getPlaca());
+            stmt.setString(8, carro.getPlaca());
 
             stmt.executeUpdate();
-        } catch (SQLException exc){
-            if(exc.getSQLState().equals("23505")){
+        } catch (SQLException exc) {
+            if (exc.getSQLState().equals("23505")) {
                 new Alert(Alert.AlertType.WARNING, "Placa já foi cadastrada").show();
             } else {
                 new Alert(Alert.AlertType.WARNING, "Houve algum erro").show();
             }
         } finally {
-            if(stmt != null){
+            if (stmt != null) {
                 ConnectionDatabase.closeConn(conn, stmt);
             } else {
                 ConnectionDatabase.closeConn(conn);
@@ -42,7 +42,7 @@ public class CarroDAO {
         }
     }
 
-    public ArrayList<Carro> readAll(){
+    public ArrayList<Carro> readAll() {
         Connection conn = ConnectionDatabase.getConn();
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -53,7 +53,7 @@ public class CarroDAO {
             stmt = conn.prepareStatement("SELECT * FROM carros");
             rs = stmt.executeQuery();
 
-            while(rs.next()){
+            while (rs.next()) {
                 Carro car = new Carro();
                 car.setPlaca(rs.getString("placa"));
                 car.setAno(rs.getString("ano"));
@@ -65,10 +65,10 @@ public class CarroDAO {
                 car.setDataCompra(rs.getDate("datacompra"));
                 lista.add(car);
             }
-        } catch (SQLException exc){
+        } catch (SQLException exc) {
             new Alert(Alert.AlertType.WARNING, "HOUVE ALGUM ERRO AO CARREGAR DADOS").show();
         } finally {
-            if(stmt != null){
+            if (stmt != null) {
                 ConnectionDatabase.closeConn(conn, stmt);
             } else {
                 ConnectionDatabase.closeConn(conn);
@@ -87,10 +87,10 @@ public class CarroDAO {
             stmt.setString(1, placa);
 
             stmt.executeUpdate();
-        } catch (SQLException exc){
+        } catch (SQLException exc) {
             new Alert(Alert.AlertType.WARNING, "Houve algum erro").show();
         } finally {
-            if(stmt != null){
+            if (stmt != null) {
                 ConnectionDatabase.closeConn(conn, stmt);
             } else {
                 ConnectionDatabase.closeConn(conn);

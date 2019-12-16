@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="&#10;some job operations created">
-      <change afterPath="$PROJECT_DIR$/Trabalho_Final_Versao2.pdf" afterDir="false" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="some job operations created">
+      <change afterPath="$PROJECT_DIR$/ListagemCarros.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/listCars/ListCars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/listCars/ListCars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cfg/ConnectionDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cfg/ConnectionDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/home/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/dao/CarroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/dao/CarroDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/listCars/listCars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/listCars/listCars.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +113,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/controllers/home" />
+      <recent name="$PROJECT_DIR$/src/controllers" />
       <recent name="$PROJECT_DIR$/src/views/home" />
       <recent name="$PROJECT_DIR$/src/views" />
     </key>
@@ -340,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576423266514</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="some job operations created">
+      <created>1576506754927</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576506754928</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -363,7 +374,8 @@
     <MESSAGE value="select carros view and back button" />
     <MESSAGE value="default password postgre" />
     <MESSAGE value="ui update" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui update" />
+    <MESSAGE value="some job operations created" />
+    <option name="LAST_COMMIT_MESSAGE" value="some job operations created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="124" width="802" height="672" key="#Notifications" timestamp="1575468470201">
@@ -398,38 +410,38 @@
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="533" y="212" width="526" height="496" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1600.875@0.25.1600.875" timestamp="1575467675148" />
-    <state x="548" y="198" width="496" height="525" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1576357215396">
+    <state x="548" y="198" width="496" height="525" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1576521951180">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="548" y="198" width="496" height="525" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1600.875@0.25.1600.875" timestamp="1576357215396" />
-    <state x="838" y="58" width="668" height="800" key="CommitChangelistDialog2" timestamp="1576506045510">
+    <state x="548" y="198" width="496" height="525" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.25.1600.875@0.25.1600.875" timestamp="1576521951180" />
+    <state x="838" y="58" width="668" height="800" key="CommitChangelistDialog2" timestamp="1576506754604">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="838" y="58" width="668" height="800" key="CommitChangelistDialog2/0.25.1600.875@0.25.1600.875" timestamp="1576506045510" />
+    <state x="838" y="58" width="668" height="800" key="CommitChangelistDialog2/0.25.1600.875@0.25.1600.875" timestamp="1576506754604" />
     <state x="151" y="95" width="1282" height="725" key="DiffContextDialog" timestamp="1576014561581">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="151" y="95" width="1282" height="725" key="DiffContextDialog/0.25.1600.875@0.25.1600.875" timestamp="1576014561581" />
-    <state x="507" y="219" width="612" height="507" key="FileChooserDialogImpl" timestamp="1576012289128">
+    <state x="507" y="219" width="612" height="507" key="FileChooserDialogImpl" timestamp="1576521946012">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="507" y="219" width="612" height="507" key="FileChooserDialogImpl/0.25.1600.875@0.25.1600.875" timestamp="1576012289128" />
-    <state width="1554" height="222" key="GridCell.Tab.0.bottom" timestamp="1576506188280">
+    <state x="507" y="219" width="612" height="507" key="FileChooserDialogImpl/0.25.1600.875@0.25.1600.875" timestamp="1576521946012" />
+    <state width="1554" height="222" key="GridCell.Tab.0.bottom" timestamp="1576521951254">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.bottom/0.25.1600.875@0.25.1600.875" timestamp="1576506188280" />
-    <state width="1554" height="222" key="GridCell.Tab.0.center" timestamp="1576506188279">
+    <state width="1554" height="222" key="GridCell.Tab.0.bottom/0.25.1600.875@0.25.1600.875" timestamp="1576521951254" />
+    <state width="1554" height="222" key="GridCell.Tab.0.center" timestamp="1576521951254">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.center/0.25.1600.875@0.25.1600.875" timestamp="1576506188279" />
-    <state width="1554" height="222" key="GridCell.Tab.0.left" timestamp="1576506188279">
+    <state width="1554" height="222" key="GridCell.Tab.0.center/0.25.1600.875@0.25.1600.875" timestamp="1576521951254" />
+    <state width="1554" height="222" key="GridCell.Tab.0.left" timestamp="1576521951253">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.left/0.25.1600.875@0.25.1600.875" timestamp="1576506188279" />
-    <state width="1554" height="222" key="GridCell.Tab.0.right" timestamp="1576506188279">
+    <state width="1554" height="222" key="GridCell.Tab.0.left/0.25.1600.875@0.25.1600.875" timestamp="1576521951253" />
+    <state width="1554" height="222" key="GridCell.Tab.0.right" timestamp="1576521951254">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state width="1554" height="222" key="GridCell.Tab.0.right/0.25.1600.875@0.25.1600.875" timestamp="1576506188279" />
+    <state width="1554" height="222" key="GridCell.Tab.0.right/0.25.1600.875@0.25.1600.875" timestamp="1576521951254" />
     <state width="1554" height="275" key="GridCell.Tab.1.bottom" timestamp="1576422000732">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
@@ -450,22 +462,22 @@
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="304" y="55" width="1026" height="840" key="SettingsEditor/0.25.1600.875@0.25.1600.875" timestamp="1576419350288" />
-    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser" timestamp="1576423269724">
+    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser" timestamp="1576506757943">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser/0.25.1600.875@0.25.1600.875" timestamp="1576423269724" />
-    <state x="395" y="199" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576354062780">
+    <state x="650" y="380" width="292" height="160" key="VCS.ChangelistChooser/0.25.1600.875@0.25.1600.875" timestamp="1576506757943" />
+    <state x="395" y="199" width="802" height="523" key="Vcs.Push.Dialog.v2" timestamp="1576506766099">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="395" y="199" width="802" height="523" key="Vcs.Push.Dialog.v2/0.25.1600.875@0.25.1600.875" timestamp="1576354062779" />
+    <state x="395" y="199" width="802" height="523" key="Vcs.Push.Dialog.v2/0.25.1600.875@0.25.1600.875" timestamp="1576506766099" />
     <state x="99" y="125" width="1402" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576245151975">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
     <state x="99" y="125" width="1402" height="676" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.25.1600.875@0.25.1600.875" timestamp="1576245151975" />
-    <state x="493" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1576498892342">
+    <state x="493" y="290" key="com.intellij.ide.util.TipDialog" timestamp="1576517107842">
       <screen x="0" y="25" width="1600" height="875" />
     </state>
-    <state x="493" y="290" key="com.intellij.ide.util.TipDialog/0.25.1600.875@0.25.1600.875" timestamp="1576498892342" />
+    <state x="493" y="290" key="com.intellij.ide.util.TipDialog/0.25.1600.875@0.25.1600.875" timestamp="1576517107842" />
     <state x="175" y="167" width="1241" height="586" key="new project wizard" timestamp="1576283701252">
       <screen x="0" y="25" width="1600" height="875" />
     </state>

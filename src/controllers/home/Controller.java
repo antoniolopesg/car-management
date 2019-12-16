@@ -10,8 +10,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import models.bean.Carro;
 import models.dao.CarroDAO;
+import utils.FileHandler;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Path;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -33,7 +36,7 @@ public class Controller implements Initializable {
     @FXML
     private Button addCar;
 
-    public Carro createCar(ActionEvent mouseEvent) {
+    public void createCar(ActionEvent mouseEvent) {
 
         SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
         Date data = null;
@@ -61,16 +64,19 @@ public class Controller implements Initializable {
                                        data);
 
             CarroDAO dao = new CarroDAO();
+
             dao.create(newCarro);
+
+            FileHandler.writer("./ListagemCarros.txt", newCarro);
         } catch (ParseException e) {
             new Alert(Alert.AlertType.WARNING, "Data inválida: " + dataCompra.getEditor().getText() + " siga o modelo (06/06/2000)").show();
         } catch (EmptyInputException e){
             new Alert(Alert.AlertType.WARNING, e.toString()).show();
         } catch (PlacaFormatException e) {
             new Alert(Alert.AlertType.WARNING, e.toString()).show();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-        return newCarro;
     }
 
     public static boolean InputValidator(TextField input){

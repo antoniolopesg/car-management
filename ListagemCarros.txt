@@ -1,0 +1,1 @@
+placa, ano, cor, marca, modelo, chassi, proprietario, dataCompra
