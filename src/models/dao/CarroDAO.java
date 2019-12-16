@@ -31,7 +31,7 @@ public class CarroDAO {
             if(exc.getSQLState().equals("23505")){
                 new Alert(Alert.AlertType.WARNING, "Placa já foi cadastrada").show();
             } else {
-                new Alert(Alert.AlertType.WARNING, "Verifique novamente o formato dos campos e se tem algum vazio").show();
+                new Alert(Alert.AlertType.WARNING, "Houve algum erro").show();
             }
         } finally {
             if(stmt != null){
@@ -76,5 +76,25 @@ public class CarroDAO {
         }
 
         return lista;
+    }
+
+    public void removeByPlaca(String placa) {
+        Connection conn = ConnectionDatabase.getConn();
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = conn.prepareStatement("DELETE FROM carros WHERE placa = ?");
+            stmt.setString(1, placa);
+
+            stmt.executeUpdate();
+        } catch (SQLException exc){
+            new Alert(Alert.AlertType.WARNING, "Houve algum erro").show();
+        } finally {
+            if(stmt != null){
+                ConnectionDatabase.closeConn(conn, stmt);
+            } else {
+                ConnectionDatabase.closeConn(conn);
+            }
+        }
     }
 }
