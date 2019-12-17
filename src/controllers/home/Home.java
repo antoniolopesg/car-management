@@ -14,13 +14,12 @@ import utils.FileHandler;
 
 import java.io.IOException;
 import java.net.URL;
-import java.nio.file.Path;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 
-public class Controller implements Initializable {
+public class Home implements Initializable {
     public TextField placa;
     public TextField ano;
     public TextField cor;
@@ -45,7 +44,7 @@ public class Controller implements Initializable {
 
         try {
             for(TextField input:inputs){
-                if(Controller.InputValidator(input)){
+                if(Home.InputValidator(input)){
                     throw new EmptyInputException(input.getId());
                 }
             }
@@ -68,6 +67,7 @@ public class Controller implements Initializable {
             dao.create(newCarro);
 
             FileHandler.writer("./ListagemCarros.txt", newCarro);
+            new Alert(Alert.AlertType.INFORMATION, "Carro salvo com sucesso").show();
         } catch (ParseException e) {
             new Alert(Alert.AlertType.WARNING, "Data inválida: " + dataCompra.getEditor().getText() + " siga o modelo (06/06/2000)").show();
         } catch (EmptyInputException e){
