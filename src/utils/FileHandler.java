@@ -14,19 +14,14 @@ public class FileHandler {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         buff.append(car.getPlaca()).append(", ")
-                .append(car.getAno())
-                .append(", ")
-                .append(car.getCor())
-                .append(", ")
-                .append(car.getMarca())
-                .append(", ")
-                .append(car.getModelo())
-                .append(", ")
-                .append(car.getChassi())
-                .append(", ")
-                .append(car.getProprietario())
-                .append(", ")
-                .append(sdf.format(car.getDataCompra()));
+            .append(car.getAno()).append(", ")
+            .append(car.getCor()).append(", ")
+            .append(car.getMarca()).append(", ")
+            .append(car.getModelo()).append(", ")
+            .append(car.getChassi()).append(", ")
+            .append(car.getProprietario()).append(", ")
+            .append(sdf.format(car.getDataCompra()));
+
         buff.close();
     }
 }
