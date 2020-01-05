@@ -1,7 +1,6 @@
 package controllers.home;
 
 import boot.Main;
-import controllers.listCars.ListCars;
 import helpers.EmptyInputException;
 import helpers.PlacaFormatException;
 import javafx.event.ActionEvent;
@@ -35,12 +34,12 @@ public class Home implements Initializable {
     @FXML
     private Button addCar;
 
-    public void createCar(ActionEvent mouseEvent) {
+    public void createCar(ActionEvent mouseEvent) throws IOException {
 
         SimpleDateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
         Date data = null;
-
         Carro newCarro = null;
+        boolean sucess = false;
 
         try {
             for(TextField input:inputs){
@@ -54,28 +53,29 @@ public class Home implements Initializable {
             data = dt.parse(dataCompra.getEditor().getText());
 
             newCarro = new Carro(placa.getText().trim(),
-                                       ano.getText().trim(),
-                                       cor.getText().trim(),
-                                       marca.getText().trim(),
-                                       modelo.getText().trim(),
-                                       chassi.getText().trim(),
-                                       proprietario.getText().trim(),
-                                       data);
+                                 ano.getText().trim(),
+                                 cor.getText().trim(),
+                                 marca.getText().trim(),
+                                 modelo.getText().trim(),
+                                 chassi.getText().trim(),
+                                 proprietario.getText().trim(),
+                                 data);
 
             CarroDAO dao = new CarroDAO();
 
-            dao.create(newCarro);
+            sucess = dao.create(newCarro);
 
-            FileHandler.writer("./ListagemCarros.txt", newCarro);
-            new Alert(Alert.AlertType.INFORMATION, "Carro salvo com sucesso").show();
         } catch (ParseException e) {
             new Alert(Alert.AlertType.WARNING, "Data inválida: " + dataCompra.getEditor().getText() + " siga o modelo (06/06/2000)").show();
         } catch (EmptyInputException e){
             new Alert(Alert.AlertType.WARNING, e.toString()).show();
         } catch (PlacaFormatException e) {
             new Alert(Alert.AlertType.WARNING, e.toString()).show();
-        } catch (IOException e) {
-            e.printStackTrace();
+        }
+
+        if(sucess){
+            FileHandler.writer("./ListagemCarros.txt", newCarro);
+            new Alert(Alert.AlertType.INFORMATION, "Carro salvo com sucesso").show();
         }
     }
 

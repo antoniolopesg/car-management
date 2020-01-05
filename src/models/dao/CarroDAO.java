@@ -11,10 +11,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CarroDAO {
-    public void create(Carro carro) {
+    public boolean create(Carro carro) {
         Connection conn = ConnectionDatabase.getConn();
         PreparedStatement stmt = null;
-
+        boolean registered = true;
         try {
             stmt = conn.prepareStatement("INSERT INTO carros (ano, cor, marca, modelo, chassi, proprietario, datacompra, placa) VALUES(?, ?, ?, ?, ?, ?, ?, ?)");
             stmt.setString(1, carro.getAno());
@@ -33,6 +33,7 @@ public class CarroDAO {
             } else {
                 new Alert(Alert.AlertType.WARNING, "Houve algum erro").show();
             }
+            registered = false;
         } finally {
             if (stmt != null) {
                 ConnectionDatabase.closeConn(conn, stmt);
@@ -40,6 +41,8 @@ public class CarroDAO {
                 ConnectionDatabase.closeConn(conn);
             }
         }
+
+        return registered;
     }
 
     public ArrayList<Carro> readAll() {

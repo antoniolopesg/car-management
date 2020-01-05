@@ -1,1 +1,5 @@
 placa, ano, cor, marca, modelo, chassi, proprietario, dataCompra
+
+LVV-1259, 2017, Verde, Renault, HB20, DASDASD, Antonio Lopes, 30/12/2019
+LVV-1259, 2019, Verde, Renault, HB20, 15984+94, Antonio Lopes, 02/01/2020
+LVV-6799, 2017, Verde, Renault, HB20, dadassd, Antonio Lopes, 31/12/2019
